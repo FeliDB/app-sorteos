@@ -1,0 +1,209 @@
+/* Contenedor principal */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #ffafbd 0%, #ffc3a0 100%);
+  font-family: 'Arial', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+/* Lista de participantes */
+.lista-participantes {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 30px 35px;
+  margin: 25px auto;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 8px 25px rgba(255, 105, 135, 0.2);
+  backdrop-filter: blur(8px);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lista-participantes:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(255, 105, 135, 0.3);
+}
+
+.lista-participantes h3 {
+  color: #e83e8c;
+  margin-bottom: 25px;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.lista-participantes ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lista-participantes li {
+  background: linear-gradient(45deg, #ff8fa3, #ffb3c1);
+  color: #fff;
+  padding: 14px 18px;
+  margin: 10px 0;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+  box-shadow: 0 4px 15px rgba(255, 105, 135, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.lista-participantes li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 105, 135, 0.35);
+}
+
+/* Sección de agregar participantes */
+.rectangulo-elementos {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 30px 25px;
+  margin: 25px auto;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(255, 105, 135, 0.2);
+  backdrop-filter: blur(8px);
+}
+
+.rectangulo-elementos input {
+  width: 65%;
+  max-width: 280px;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-right: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  outline: none;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.rectangulo-elementos input:focus {
+  box-shadow: 0 4px 18px rgba(255, 105, 135, 0.35);
+  transform: translateY(-1px);
+}
+
+.rectangulo-elementos button {
+  background: linear-gradient(45deg, #ff6f91, #ff8fa3);
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255, 105, 135, 0.25);
+  transition: all 0.3s ease;
+}
+
+.rectangulo-elementos button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 105, 135, 0.35);
+}
+
+/* Sección de sortear */
+.Sortear {
+  text-align: center;
+  margin: 35px auto;
+  width: 100%;
+  max-width: 500px;
+}
+
+.Sortear button {
+  background: linear-gradient(45deg, #ff5f7e, #ff7a9d);
+  color: white;
+  border: none;
+  padding: 18px 50px;
+  border-radius: 12px;
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(255, 95, 126, 0.3);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.Sortear button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(255, 95, 126, 0.4);
+}
+
+/* Resultado del ganador */
+div p {
+  background: rgba(255, 255, 255, 0.95);
+  color: #d6336c;
+  padding: 22px;
+  margin: 25px auto;
+  max-width: 500px;
+  width: 100%;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  box-shadow: 0 8px 25px rgba(255, 105, 135, 0.2);
+  backdrop-filter: blur(8px);
+}
+
+/* Animación para el ganador */
+.ganador {
+  animation: pop 0.6s ease forwards, pulse 1.5s ease infinite 0.6s;
+}
+
+@keyframes pop {
+  0%   { transform: scale(0.6); opacity: 0; }
+  70%  { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+@keyframes pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(255, 105, 135, 0.6); }
+  70%  { box-shadow: 0 0 25px 15px rgba(255, 105, 135, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 105, 135, 0); }
+}
+
+.ganador-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.ganador-animado {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #2ecc71;
+    animation: ganadorZoom 1s ease forwards, ganadorBrillo 1.5s infinite alternate;
+}
+
+@keyframes ganadorZoom {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes ganadorBrillo {
+    from {
+        text-shadow: 0 0 5px #2ecc71, 0 0 10px #27ae60;
+    }
+    to {
+        text-shadow: 0 0 15px #2ecc71, 0 0 30px #27ae60;
+    }
+}

@@ -1,0 +1,90 @@
+/* SorteoPres.mobile.css */
+
+/* Se aplicará SOLO en pantallas menores a 768px */
+@media screen and (max-width: 768px) {
+
+    body {
+        padding: 10px;
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lista-participantes {
+        width: 95%;
+        margin: 15px auto;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .lista-participantes ul {
+        padding: 0;
+        list-style: none;
+    }
+
+    .lista-participantes li {
+        font-size: 15px;
+        padding: 8px;
+        margin: 6px 0;
+        border-radius: 8px;
+    }
+
+    .rectangulo-elementos {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* 🔹 centra los inputs y botones */
+        justify-content: center;
+        gap: 12px;           /* 🔹 separación uniforme */
+        width: 95%;
+        margin: 15px auto;
+        padding: 20px;
+    }
+
+    .rectangulo-elementos input {
+        width: 100%;
+        max-width: 300px;
+        padding: 12px;
+        font-size: 16px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    .rectangulo-elementos button {
+        width: 100%;
+        max-width: 300px;
+        padding: 14px;
+        font-size: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    .Sortear {
+        margin-top: 20px;
+        width: 95%;
+        display: flex;
+        justify-content: center; /* 🔹 botón centrado */
+    }
+
+    .Sortear button {
+        width: 100%;
+        max-width: 300px;
+        padding: 16px;
+        font-size: 18px;
+        border-radius: 10px;
+    }
+
+    .ganador-container {
+        margin-top: 20px;
+        width: 95%;
+        display: flex;
+        justify-content: center; /* 🔹 centrado */
+        padding: 10px;
+    }
+
+    .ganador-animado {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+}
